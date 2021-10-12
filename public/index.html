@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/d7b2dac435.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Join chat</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1>WeChat <i class="fa fa-commenting-o"></i></h1>
+      <form action="/chat.html">
+
+        <div class="body">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter username"
+            required
+            autofocus
+          />
+        </div>
+
+        <div class="body">
+          <label for="room">Room</label>
+          <select name="room" id="room">
+            <option value="C">C</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="Python">Python</option>
+          </select>
+        </div>
+        
+        <button class="btn" type="submit">Join Chat</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/style1.css" />                                            <!--include css-->
+
+    <script src="https://kit.fontawesome.com/d7b2dac435.js" crossorigin="anonymous"></script>   <!--include fontawesome-->
+
+    <!-- get username and room from url using qs library (google search:qs cdn) -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+      integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script defer src="/socket.io/socket.io.js"></script>
+    <!--defer runs the script after <body> -->
+    <!-- gives access to front end libray & in client.js we can access io method   -->
+
+    <script defer src="js/client.js"></script>
+
+    <title>WeChat</title>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="nav">
+        <h1>WeChat <i class="fa fa-commenting-o"></i></h1>                            <!--i tag is for fontawesome symbols-->
+        <a href="/index.html">Leave Chat</a>
+      </div>
+
+      <div class="interface">
+
+        <div class="left">
+          <i class="fa fa-comments-o"><span> Room Name</span></i>
+          <p id="roomname"></p>                                                      <!-- id roomname we have included in client.js-->
+          <i class="fa fa-users" id="activeusers"><span> Active Members</span></i>
+          <ul class="list">                                                          <!-- class list we have included in client.js-->
+            <!-- <li>vivek</li> -->
+          </ul>
+        </div>
+
+        <div class="right">
+
+          <div class="display">
+            <!-- <div class="msg righthand">
+              <p class="up">Soham-<span>6:02pm</span></p>
+              <p class="down">hi kiran how are you?</p>
+            </div>
+            <div class="msg lefthand">
+              <p class="up">Kiran-<span>6:04pm</span></p>
+              <p class="down">
+                vivek kadam has left the chat
+              </p>
+            </div> -->
+          </div>
+
+          <div class="send">
+            <form id="form">
+
+              <div>
+                <input
+                  type="text"
+                  class="message"
+                  id="message"
+                  placeholder="Enter message"
+                  autofocus
+                />
+              </div>
+
+              <div>
+                <button class="btn" type="submit">
+                  <i class="fas fa-paper-plane"></i> Send
+                </button>
+              </div>
+
+            </form>
+          </div>                                                      <!--send div-->
+
+        </div>                                                        <!--right div-->
+
+      </div>                                                          <!--interface div-->
+
+    </div>                                                            <!--conntainer div-->
+  </body>
+</html>
